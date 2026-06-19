@@ -1,2 +1,13 @@
 # Excel_PBL_Gigs_2026
-This is an Repo foucsed on my Excel Analytics Journey from Good to Advanced Applications, I've adopted an Different way of learn in this repository, It is gonna be PBL(Problem-Based Learning) Approach,
+Applied Excel Analytics: A Journey to Advanced Mastery, 
+About This Repository I have been comfortable with Excel for a long time, but "comfortable" is not enough.
+- My goal with this repository is to bridge the gap between basic spreadsheet usage and advanced, professional data analytics.
+- Instead of working with clean, synthesized, and simple tables, I am using this space to tackle real-world, messy datasets using Problem-Based Learning (PBL).I am committed to consistently updating this repository aiming for daily Practice to build a lasting habit of analytical thinking, data modeling, and visualization. The projects in this repositories follows the 6-phase data analysis lifecycle taught in the Google Data Analytics Certificate:
+- ASK: Defining the business problem, identifying stakeholders, and asking "so what?" before touching the data.
+- PREPARE: Locating real-world datasets, understanding the metadata/schema, and ensuring data integrity.
+- PROCESS: The cleaning phase. Removing duplicates, handling missing values, standardizing formats, and merging relational tables using Power Query.
+- ANALYZE: Using advanced Excel logic (nested IFs, XLOOKUP, dynamic arrays) and PivotTables to find trends, outliers, and answers to the initial questions.
+- SHARE: Building interactive, visually clean dashboards (PivotCharts, slicers) to communicate insights effectively.
+- ACT: Summarizing findings into actionable business recommendations.
+- Current Project: Brazilian E-Commerce (Olist)My current focus is the Olist dataset—a massive, multi-table relational database containing 100000 rows real e-commerce orders.Learning Objectives for this dataset, Transitioning from flat-file cleaning to relational data modeling.Mastering Power Query to merge multiple datasets (Orders, Customers, Products, Translations).Calculating delivery variances and mapping geographic sales concentrations.
+  

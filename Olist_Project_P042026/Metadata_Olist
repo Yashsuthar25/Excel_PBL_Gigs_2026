@@ -1,0 +1,154 @@
+# Olist Dataset Metadata
+
+## Dataset Overview
+
+| Property | Value |
+|----------|-------|
+| **Name** | Brazilian E-Commerce Public Dataset by Olist |
+| **Source** | Kaggle (olistbr) |
+| **URL** | https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce |
+| **Description** | 100,000 Orders with product, customer and reviews info from Brazilian e-commerce |
+| **Time Period** | 2016–2018 |
+| **Country** | Brazil |
+| **Orders Count** | ~100,000 unique orders |
+| **Products Count** | ~33,000 sold products |
+| **Categories** | 74 different product categories |
+| **Format** | CSV files |
+| **Total Files** | 9 CSV datasets |
+
+---
+
+## Dataset Files (9 CSV Tables)
+
+| # | File Name | Purpose |
+|---|-----------|---------|
+| 1 | `olist_customers_dataset.csv` | Customer information and location |
+| 2 | `olist_geolocation_dataset.csv` | Brazilian zip codes with lat/lng coordinates |
+| 3 | `olist_order_items_dataset.csv` | Items purchased within each order |
+| 4 | `olist_order_payments_dataset.csv` | Order payment options and details |
+| 5 | `olist_order_reviews_dataset.csv` | Customer reviews and ratings |
+| 6 | `olist_orders_dataset.csv` | Core dataset - all order information |
+| 7 | `olist_products_dataset.csv` | Product details and attributes |
+| 8 | `olist_sellers_dataset.csv` | Seller information who fulfilled orders |
+| 9 | `product_category_name_translation.csv` | Product category name translation (Portuguese→English) |
+
+---
+
+## Table Schemas & Column Descriptions
+
+### 1. olist_orders_dataset (Core Table)
+| Column | Description |
+|--------|-------------|
+| `order_id` | Unique identifier for each order |
+| `customer_id` | Unique identifier for each customer |
+| `order_status` | Status of the order (delivered, cancelled, shipped, etc.) |
+| `order_purchase_timestamp` | Date and time of order purchase |
+| `order_approved_at` | Approval date and time |
+| `order_delivered_customer_date` | Date and time of delivery to customer |
+| `order_estimated_delivery_date` | Estimated delivery date |
+
+### 2. olist_order_items_dataset
+| Column | Description |
+|--------|-------------|
+| `order_id` | Links to orders table |
+| `order_item_id` | Identifier for each item in an order |
+| `product_id` | Unique identifier for each product |
+| `price` | Price of the product |
+| `freight_value` | Cost of shipping |
+
+### 3. olist_products_dataset
+| Column | Description |
+|--------|-------------|
+| `product_id` | Unique identifier for each product |
+| `product_category_name` | Category of the product (Portuguese) |
+| `product_name_lenght` | Length of product name |
+| `product_description_lenght` | Length of product description |
+| `product_photos_qty` | Number of product photos |
+| `product_weight_g` | Product weight in grams |
+| `product_length_cm` | Product length in cm |
+| `product_height_cm` | Product height in cm |
+| `product_width_cm` | Product width in cm |
+
+### 4. olist_order_payments_dataset
+| Column | Description |
+|--------|-------------|
+| `order_id` | Links to orders table |
+| `payment_sequential` | Payment sequence number |
+| `payment_type` | Type of payment (credit_card, debit_card, boleto, voucher) |
+| `payment_installments` | Number of installments for payment |
+| `payment_value` | Total payment for the order |
+
+### 5. olist_order_reviews_dataset
+| Column | Description |
+|--------|-------------|
+| `order_id` | Links to orders table |
+| `review_score` | Customer review score (1–5) |
+| `review_comment` | Review comment text |
+| `review_creation_date` | Date review was created |
+| `review_answer_timestamp` | Timestamp when seller answered |
+
+### 6. olist_customers_dataset
+| Column | Description |
+|--------|-------------|
+| `customer_id` | Unique identifier for each customer |
+| `customer_unique_id` | Unique customer identifier |
+| `customer_locale` | Customer location/locale |
+| `customer_city` | City of the customer |
+| `customer_state` | State of the customer |
+
+### 7. olist_sellers_dataset
+| Column | Description |
+|--------|-------------|
+| `seller_id` | Unique identifier for each seller |
+| `seller_city` | City of the seller |
+| `seller_state` | State of the seller |
+
+### 8. olist_geolocation_dataset
+| Column | Description |
+|--------|-------------|
+| `zip_code_prefix` | Brazilian zip code prefix |
+| `latitude` | Latitude coordinate |
+| `longitude` | Longitude coordinate |
+
+### 9. product_category_name_translation
+| Column | Description |
+|--------|-------------|
+| `product_category_name` | Category name in Portuguese |
+| `product_category_name_english` | Category name translated to English |
+
+---
+
+## Key Insights for Data Analysis
+
+| Aspect | Finding |
+|--------|---------|
+| **Average Order Price** | R$120 (std: R$184) |
+| **Average Freight** | R$20 (max: R$409) |
+| **Average Review Score** | 4.0 (std: 1.4) |
+| **Top Payment Method** | Credit card (overwhelmingly preferred) |
+| **Top Category** | Bed, table and bath |
+| **Peak Order Date** | November 24, 2017 (Black Friday) |
+| **Dominant Region** | Southeast Brazil |
+| **Highest Freight States** | North and Northeastern states |
+
+---
+
+## Use Cases
+
+- Exploratory Data Analysis (EDA)
+- Customer behavior analysis
+- Regional sales patterns
+- Pricing and freight optimization
+- Customer satisfaction analysis
+- Product category performance
+- Delivery time analysis
+- Order cancellation prediction
+- Freight value prediction
+
+---
+
+## License & Attribution
+
+- **Provider**: Olist Store (Brazilian e-commerce)
+- **Platform**: Kaggle
+- **License**: Public dataset (free for use)
